@@ -28,7 +28,7 @@ jobs:
       
       - name: Terraform Init
         id: Init
-        run: terraform init
+        run: terraform init -backend-config="sas_token=${{ SECRETS.SAS_TOKEN }}"
 
       - name: Terraform Validate
         id: Validate
